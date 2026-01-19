@@ -7,6 +7,65 @@
 <body>
 
     19 01 2026</h2>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шифр Цезаря</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+      color: #222;
+      font-family: monospace;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .content {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p id="date"></p>
+
+    <h2>Решение шифров Цезаря</h2>
+
+    <h3>1. Определение ключа по парам «открытый текст – шифротекст»</h3>
+    <p><strong>а. АПЕЛЬСИН → САЦЬНВЩЮ</strong></p>
+    <p>Ключ: <code>k = 18</code></p>
+
+    <p><strong>б. АБРИКОС → ЫЬЛГЕЙМ</strong></p>
+    <p>Ключ: <code>k = 28</code></p>
+
+    <h3>2. Расшифровка сообщений с неизвестным ключом (0 &lt; k &lt; 32)</h3>
+    <p><strong>а. ФХНЗКЧ</strong> → при <code>k = 21</code>: <code>КОДИРО</code> (возможно, «КОДИРОВКА» усечена)</p>
+    <p><strong>б. ЦЩЕБФ</strong> → при <code>k = 21</code>: <code>ХРАНИ</code></p>
+
+    <h3>3. Шифрование фамилии «ФИРСОВА» с ключом k = 10</h3>
+    <p>Открытый текст: <code>ФИРСОВА</code></p>
+    <p>Шифротекст: <code>ЧЫБЧУЖК</code></p>
+
+    <p><em>Все вычисления выполнены в алфавите русского языка (32 буквы, без «Ё»).</em></p>
+  </div>
+
+  <script>
+    // Вставляем текущую дату
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Europe/Moscow' };
+    document.getElementById('date').textContent = now.toLocaleDateString('ru-RU', options);
+  </script>
+</body>
+</html>
+    
 <a href="mailto:firsova1204@gmail.com">Напишите мне</a>    
 <h2> 12 01 , 2026</h2>
 <h2> домен - firsova1456 github io . </h2>    
